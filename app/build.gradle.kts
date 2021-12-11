@@ -6,7 +6,11 @@
  * User Manual available at https://docs.gradle.org/7.3/userguide/building_java_projects.html
  */
 
+group = "me.gregorysdtaylor"
+version = "0.1.0"
+
 java {
+
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
     }
@@ -23,6 +27,9 @@ repositories {
 }
 
 dependencies {
+    // https://mvnrepository.com/artifact/org.eclipse.jgit/org.eclipse.jgit
+    implementation("org.eclipse.jgit:org.eclipse.jgit:6.0.0.202111291000-r")
+
     // Use JUnit Jupiter for testing.
     testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
 }
